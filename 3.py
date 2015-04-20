@@ -1,8 +1,9 @@
 
 def main():
-	''' Show the numbers from 0 to 100 '''
-	for i in range(101):
-		if (i % 10 == 0 and i != 0):
+	'''Shows the numbers from 0 to 100'''
+	print(0, end=' ')
+	for i in range(1, 101):
+		if (i % 10 == 0):
 			print()
 		print(i, end=' ')
 	print()
