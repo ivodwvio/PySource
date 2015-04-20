@@ -1,3 +1,0 @@
-for name, obj in inspect.getmembers(PyMath):
-	if inspect.isfunction(obj) and name[:4] == 'task':
-		print(name, '-', inspect.getdoc(obj))
