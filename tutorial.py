@@ -123,3 +123,46 @@ print(letters)
 
 letters = ['a', 'b', 'c', 'd']
 print(len(letters))
+
+a = ['a', 'b', 'c']
+n = [1, 2, 3]
+x = [a, n]
+print(x)
+print(x[0])
+print(x[0][1])
+
+# Fibonacci series:
+# the sum of two elements defines the next
+a, b = 0, 1
+while b < 10:
+	print(b)
+	a, b = b, a + b
+
+i = 256 * 256
+print('The value of i is', i)
+
+a, b = 0, 1
+while b < 1000:
+	print(b, end=',')
+	a, b = b, a + b
+print()
+
+x = 2 # int(input('Please enter an integer: '))
+if x < 0:
+	x = 0
+	print('Negative changed to zero')
+elif x == 0:
+	print('Zero')
+elif x == 1:
+	print('Single')
+else:
+	print('More')
+
+words = ['cat', 'window', 'defenestrate']
+for w in words:
+	print(w, len(w))
+
+for w in words[:]: # loop over a slice copy of the entire list.
+	if len(w) > 6:
+		words.insert(0, w)
+print(words)
