@@ -29,16 +29,19 @@ def help():
 	print('Command list:')
 	print('help - display this menu')
 	print('exit - stop the program')
+
 	files = [f for f in os.listdir('.') if os.path.isfile(f)]
+
 	modules = []
 	for f in files:
 		name = os.path.splitext(f)[0]
 		if name.isdigit():
-			modules.append(f)
+			modules.append(name)
+
+	modules.sort(key = int)
 	for m in modules:
-		name = os.path.splitext(m)[0]
-		module = __import__(name)
+		module = __import__(m)
 		solution = getattr(module, 'main')
-		print(name, '-', inspect.getdoc(solution))
+		print(m, '-', inspect.getdoc(solution))
 
 if __name__ == '__main__': main()

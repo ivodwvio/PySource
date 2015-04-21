@@ -1,6 +1,6 @@
 
 def main():
-	''' Comment '''
+	'''Comment'''
 	pass
 
 if __name__ == '__main__': main()

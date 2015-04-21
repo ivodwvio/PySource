@@ -1,6 +1,6 @@
 
 def main():
-	'''Shows the numbers from 0 to 100'''
+	'''Numbers from 0 to 100'''
 	print(0, end=' ')
 	for i in range(1, 101):
 		if (i % 10 == 0):

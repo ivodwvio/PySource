@@ -1,6 +1,6 @@
 
 def main():
-	'''Prints Hi World on the console'''
+	'''Hi World'''
 	print('Hi World!')
 
 if __name__ == '__main__': main()

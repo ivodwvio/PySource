@@ -1,6 +1,6 @@
 
 def main():
-	'''Shows the even numbers from 0 to 100'''
+	'''Even numbers from 0 to 100'''
 	count = 0
 	for i in range(1, 101):
 		if i % 2 == 0:
