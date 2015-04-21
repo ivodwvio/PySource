@@ -5,11 +5,11 @@ def main():
 	running = True
 	while running:
 		command = input('>')
-		if command == 'exit':
+		if command == 'exit' or command == 'quit':
 			running = False
 		elif command == 'help':
 			help()
-		elif command == 'list':
+		elif command == 'list' or command == 'ls':
 			list()
 		elif command == 'next':
 			next()
