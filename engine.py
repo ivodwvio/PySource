@@ -9,6 +9,8 @@ def main():
 			running = False
 		elif command == 'help':
 			help()
+		elif command == 'list':
+			list()
 		elif command == 'next':
 			files = [f for f in os.listdir('.') if os.path.isfile(f)]
 			count = 0
@@ -27,17 +29,18 @@ def main():
 
 def help():
 	print('Command list:')
-	print('help - display this menu')
+	print('help - display built-in commands')
+	print('list - display task commands')
+	print('next - see the number for the next task')
 	print('exit - stop the program')
 
+def list():
 	files = [f for f in os.listdir('.') if os.path.isfile(f)]
-
 	modules = []
 	for f in files:
 		name = os.path.splitext(f)[0]
 		if name.isdigit():
 			modules.append(name)
-
 	modules.sort(key = int)
 	for m in modules:
 		module = __import__(m)
