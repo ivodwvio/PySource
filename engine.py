@@ -12,13 +12,7 @@ def main():
 		elif command == 'list':
 			list()
 		elif command == 'next':
-			files = [f for f in os.listdir('.') if os.path.isfile(f)]
-			count = 0
-			for f in files:
-				name = os.path.splitext(f)[0]
-				if name.isdigit():
-					count += 1
-			print('Next is', count + 1)
+			next()
 		else:
 			try:
 				module = __import__(command)
@@ -46,5 +40,14 @@ def list():
 		module = __import__(m)
 		solution = getattr(module, 'main')
 		print(m, '-', inspect.getdoc(solution))
+
+def next():
+	files = [f for f in os.listdir('.') if os.path.isfile(f)]
+	count = 0
+	for f in files:
+		name = os.path.splitext(f)[0]
+		if name.isdigit():
+			count += 1
+	print('Next is', count + 1)
 
 if __name__ == '__main__': main()

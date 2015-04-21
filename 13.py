@@ -1,6 +1,6 @@
 
 def main():
-	'''Calculate Exame Score'''
+	'''Grade Calculator for 6 scale'''
 	count = int(input('Number of tasks: '))
 	question = input('right or wrong answers? ')
 	right = 0
